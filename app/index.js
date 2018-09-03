@@ -1,7 +1,6 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = module.exports = express();
-var path  = require('path'); // Use it later to get host path
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json()); // parsing req body to use it further
@@ -19,17 +18,15 @@ app.post('/news', (req, res) => {
         })
 
     }else {
-        //res.send("<h1> erro </h1>");
-        res.status(400).json({error: "Informe o nome e o emaill"});
+        //res.send("<h1> error </h1>");
+        res.status(400).json({error: "Missing newsEmail propertie"});
     }
  
 })
 
 app.get('/news', (req, res) => {
 
-        res.send("<h1> noia </h1>");
-    console.log("dahwdahw");
-
+    res.send("<h1> Worked! </h1>");
  
 })
 
