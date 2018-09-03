@@ -1,6 +1,8 @@
 // Index.js
-const app = require('./newsletter/newsletter');
+const app = require('./app/index');
 
-app.listen(3000, () => {
-    console.log("Conectado a porta 3000");
+let port = (process.argv[2] || (process.env.npm_package_config_port || 3000));
+
+app.listen(port, () => {
+    console.log("Conectado a porta " + port);
 })
