@@ -14,7 +14,9 @@ Express web server to use as OCC's server-side extension.
               fileName: name
          }
  #  Usage
-    node index.js port(optional) and browse localhost:port/news
+    $ node index.js port(optional) 
+    and browse localhost:port/news
+    
     or
     browse host/ccstorex/custom/news
  
